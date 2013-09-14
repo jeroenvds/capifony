@@ -200,7 +200,7 @@ describe "Capifony::Symfony2 - symfony" do
       @configuration.find_and_execute_task('symfony:composer:update')
     end
 
-    it { should have_run('vendorDir=/var/www/current/vendor; if [ -d $vendorDir ] || [ -h $vendorDir ]; then cp -a $vendorDir /var/www/releases/20120927/vendor; fi;') }
+    it { should have_run('vendorDir=/var/www/current/vendor; if [ -d $vendorDir ] || [ -h $vendorDir ]; then cp -a $vendorDir /var/www/releases/20120927; fi;') }
   end
 
   context "when running symfony:composer:install with an existing composer.phar in the previous release" do
@@ -265,7 +265,7 @@ describe "Capifony::Symfony2 - symfony" do
       @configuration.find_and_execute_task('symfony:composer:install')
     end
 
-    it { should have_run('vendorDir=/var/www/current/vendor; if [ -d $vendorDir ] || [ -h $vendorDir ]; then cp -a $vendorDir /var/www/releases/20120927/vendor; fi;') }
+    it { should have_run('vendorDir=/var/www/current/vendor; if [ -d $vendorDir ] || [ -h $vendorDir ]; then cp -a $vendorDir /var/www/releases/20120927; fi;') }
   end
 
   context "when running symfony:composer:dump_autoload" do
